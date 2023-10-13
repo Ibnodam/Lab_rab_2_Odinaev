@@ -17,16 +17,16 @@
 //double radius_alpha = (alphaMass * V_alpha) / (q_alpha * B); // Находим радиус альфа-частицы
 //if ((radius_alpha / radius_proton) > 1)
 //{
-//    Console.WriteLine("radius_alpha > radius_proton");
+//    Console.WriteLine("а) radius_alpha > radius_proton");
 
 //}
 //else if ((radius_alpha / radius_proton) < 1)
 //{
-//    Console.WriteLine("radius_alpha < radius_proton");
+//    Console.WriteLine("а) radius_alpha < radius_proton");
 //}
 //else
 //{
-//    Console.WriteLine("radius_alpha = radius_proton");
+//    Console.WriteLine("а) radius_alpha = radius_proton");
 //}
 //////// Условие при котором энергии равны
 //double W_proton = 4; // Энергия протона
@@ -35,16 +35,16 @@
 //double radius_alpha_b = ((Math.Sqrt(2 * W_alpha * alphaMass)) / (q_alpha * B));
 //if ((radius_alpha_b / radius_proton_b) > 1)
 //{
-//    Console.WriteLine("radius_alpha > radius_proton");
+//    Console.WriteLine("б) radius_alpha > radius_proton");
 
 //}
 //else if ((radius_alpha_b / radius_proton_b) < 1)
 //{
-//    Console.WriteLine("radius_alpha < radius_proton");
+//    Console.WriteLine("б) radius_alpha < radius_proton");
 //}
 //else
 //{
-//    Console.WriteLine("radius_alpha = radius_proton");
+//    Console.WriteLine("б) radius_alpha = radius_proton");
 //}
 
 
