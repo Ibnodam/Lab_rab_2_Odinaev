@@ -1,0 +1,135 @@
+use myDataBase
+switched to db myDataBase
+db.createCollection("registrars")
+{ ok: 1 }
+db.registrars.insertOne({
+    lastName: "", 
+    firstName: "", 
+    middleName: "", 
+    hireDate: null, 
+    registrarCode: "" 
+});
+{
+  acknowledged: true,
+  insertedId: ObjectId('680257d40dff3ba51a4009ce')
+}
+db.registrars.insertMany([
+    {
+        lastName: "Петров",
+        firstName: "Петр",
+        middleName: "Петрович",
+        hireDate: new Date("2023-02-01"),
+        registrarCode: "67890"
+    },
+    {
+        lastName: "Сидоров",
+        firstName: "Сидор",
+        middleName: "Сидорович",
+        hireDate: new Date("2023-03-01"),
+        registrarCode: "54321"
+    }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680259490dff3ba51a4009cf'),
+    '1': ObjectId('680259490dff3ba51a4009d0')
+  }
+}
+db.createCollection("documents")
+{ ok: 1 }
+db.documents.insertMany([
+   {
+       documentCode: "DOC001", 
+       documentNumber: "001", 
+       registrationDate: new Date("2023-01-10"), 
+       summary: "Краткое содержание документа 1",
+       documentType: "Тип документа 1", 
+       senderOrganizationCode: "ORG001",
+       registrarCode: "REG001" 
+   },
+   {
+       documentCode: "DOC002",
+       documentNumber: "002",
+       registrationDate: new Date("2023-01-11"),
+       summary: "Краткое содержание документа 2",
+       documentType: "Тип документа 2",
+       senderOrganizationCode: "ORG002",
+       registrarCode: "REG002"
+   },
+   {
+       documentCode: "DOC003",
+       documentNumber: "003",
+       registrationDate: new Date("2023-01-12"),
+       summary: "Краткое содержание документа 3",
+       documentType: "Тип документа 3",
+       senderOrganizationCode: "ORG003",
+       registrarCode: "REG003"
+   },
+   {
+       documentCode: "DOC004",
+       documentNumber: "004",
+       registrationDate: new Date("2023-01-13"),
+       summary: "Краткое содержание документа 4",
+       documentType: "Тип документа 4",
+       senderOrganizationCode: "ORG004",
+       registrarCode: "REG004"
+   },
+   {
+       documentCode: "DOC005",
+       documentNumber: "005",
+       registrationDate: new Date("2023-01-14"),
+       summary: "Краткое содержание документа 5",
+       documentType: "Тип документа 5",
+       senderOrganizationCode: "ORG005",
+       registrarCode: "REG005"
+   }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('68025a0d0dff3ba51a4009d1'),
+    '1': ObjectId('68025a0d0dff3ba51a4009d2'),
+    '2': ObjectId('68025a0d0dff3ba51a4009d3'),
+    '3': ObjectId('68025a0d0dff3ba51a4009d4'),
+    '4': ObjectId('68025a0d0dff3ba51a4009d5')
+  }
+}
+
+db.organizations.insertMany([
+   {
+       shortName: "ООО Ромашка", 
+       fullName: "Общество с ограниченной ответственностью Ромашка", 
+       legalAddress: "г. Москва, ул. Цветочная, д. 1", 
+       phone: "+7 (495) 123-45-67", 
+       directorFullName: "Иванов Иван Иванович" 
+   },
+   {
+       shortName: "ЗАО Лилия",
+       fullName: "Закрытое акционерное общество Лилия",
+       legalAddress: "г. Санкт-Петербург, пр. Невский, д. 2",
+       phone: "+7 (812) 234-56-78",
+       directorFullName: "Петров Петр Петрович"
+   },
+   {
+       shortName: "ИП Сосна",
+       fullName: "Индивидуальный предприниматель Сосна",
+       legalAddress: "г. Казаньул. Лесная, д. 3",
+       phone: "+7 (843) 345-67-89",
+       directorFullName: "Сидоров Сидор Сидорович"
+   },
+   {
+       shortName: "АО Сосна",
+       fullName: "Акционерное общество Сосна",
+       legalAddress: "г. Екатеринбург, ул. Лесная, д. 4",
+       phone: "+7 (343) 456-78-90",
+       directorFullName: "Алексеев Алексей Алексеевич"
+   },
+   {
+       shortName: "ООО Береза",
+       fullName: "Общество с ограниченной ответственностью Береза",
+       legalAddress: "г. Новосибирск, ул. Березовая, д. 5",
+       phone: "+7 (383) 567-89-01",
+       directorFullName: "Федоров Федор Федорович"
+   }
+]);
